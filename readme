@@ -1,0 +1,12 @@
+# Blog Application
+
+This blog application is built using Flask and allows a user to create, edit, and delete blog posts after logging in.
+The homepage displays all posts in reverse chronological order, including the title, content, author, and date.
+Users can log in through the `/login` page, which grants access to a personal dashboard.
+From the dashboard, users can manage their own posts by creating new entries, editing existing ones, or deleting them entirely.
+Each post is stored in a database along with the author's ID and timestamp of creation.
+The application uses Flask-Login for user authentication and SQLAlchemy as the ORM for database operations.
+Passwords are securely hashed, and access to editing or deleting posts is restricted to the original author.
+username is admin & password is admin
+The project includes HTML templates for all pages, rendered with Jinja2.
+To run it, install the required libraries, start the app, and visit `http://127.0.0.1:5000/` in your browser.

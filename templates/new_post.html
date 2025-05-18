@@ -1,0 +1,7 @@
+<h2>{{ 'Edit' if post else 'New' }} Post</h2>
+<form method="post">
+  <input name="title" placeholder="Title" value="{{ post.title if post else '' }}"><br>
+  <textarea name="content">{{ post.content if post else '' }}</textarea><br>
+  <button type="submit">Submit</button>
+</form>
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>

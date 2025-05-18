@@ -1,0 +1,12 @@
+<h2>Your Posts</h2>
+<a href="{{ url_for('new_post') }}">Add New Post</a>
+<table>
+  {% for post in posts %}
+    <tr>
+      <td>{{ post.title }}</td>
+      <td><a href="{{ url_for('edit_post', post_id=post.id) }}">Edit</a></td>
+      <td><a href="{{ url_for('delete_post', post_id=post.id) }}">Delete</a></td>
+    </tr>
+  {% endfor %}
+</table>
+<a href="{{ url_for('logout') }}">Logout</a>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Blog Home</title></head>
+<body>
+  <h1>Blog Posts</h1>
+  {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p><em>{{ post.created_at }}</em></p>
+    <p>{{ post.content|safe }}</p>
+  {% endfor %}
+  <a href="{{ url_for('login') }}">Login</a>
+</body>
+</html>
